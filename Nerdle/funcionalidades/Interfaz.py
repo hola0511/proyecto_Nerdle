@@ -1,8 +1,8 @@
 import tkinter as tk
-
+#from funcionalidades import comparar_problemas  , command=comparar_problemas
 ventana = tk.Tk()
 ventana.title("Nerdle")
-ventana.geometry("500x400")
+ventana.geometry("600x400")
 
 bienvenida = tk.Label(ventana, text = "Bienbenido a Nerdle")
 bienvenida.pack()
@@ -13,6 +13,11 @@ reglas.pack()
 reglas1.pack()
 reglas2.pack()
 
+intento = tk.Entry()
+intento.pack()
+
+guess = tk.Button(text="guardar intento")
+guess.pack()
 
 
 ventana.mainloop()
