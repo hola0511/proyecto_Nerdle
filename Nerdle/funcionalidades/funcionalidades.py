@@ -1,3 +1,6 @@
+import random
+
+
 class Jugador:
 
     def registrar_jugador(self):
@@ -9,7 +12,9 @@ class Jugador:
 class problema:
 
     def crear_problema(self):
-        pass
+        elementos = [str(i) for i in range(10)] + ['+', '-', '*', '/', '=']
+        secuencia = [random.choice(elementos) for _ in range(8)]
+        return secuencia
 
     def mostrar_problema(self):
         pass
