@@ -6,11 +6,12 @@ class Jugador:
 
     def registrar_jugador(self):
         pass
+
     def crear_jugador(self):
         pass
 
 
-class problema:
+class Problema:
 
     def crear_problema(self):
         elementos = [str(i) for i in range(10)] + ['+', '-', '*', '/', '=']
@@ -26,15 +27,14 @@ class Juego:
     def __init__(self):
         self.intentos_maximos = 6
         self.intentos_restantes = self.intentos_maximos
-        self.problem = problema()
+        self.problem = Problema()
         self.target_sequence = self.problem.crear_problema()
 
-
-    def cantidad_intentos(self):
+    def cantidad_intentos(self) -> int:
         return self.intentos_restantes
 
-    def comparar_problemas(self, intento):
-        intento = intento_pantalla.get()
+    def comparar_problemas(self):
+        intento = Interfaz.intento_pantalla.get()
         correct_position = 0
         correct_elements = 0
         incorrect_elements = 0
@@ -46,6 +46,3 @@ class Juego:
             else:
                 incorrect_elements += 1
         return correct_position, correct_elements, incorrect_elements
-
-    def siguiente_intento(self):
-        pass
