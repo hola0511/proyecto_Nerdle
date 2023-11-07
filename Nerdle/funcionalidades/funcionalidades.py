@@ -4,6 +4,11 @@ import Interfaz
 
 class Jugador:
 
+    def __init__(self, nombre):
+        self.nombre:str = nombre
+        self.intentos_maximos = 6
+        self.intentos_restantes = self.intentos_maximos
+
     def registrar_jugador(self):
         pass
 
