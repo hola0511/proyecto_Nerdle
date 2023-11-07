@@ -19,11 +19,19 @@ reglas2.pack()
 intento_pantalla = tk.Entry()
 intento_pantalla.pack()
 
-intentos = tk.Label(ventana, text=funcionalidades.Juego.cantidad_intentos())
-
+retroalimentacion = tk.Label(ventana, text="Retroalimentacion")
+retroalimentacion1 = tk.Label(ventana, text=funcionalidades.Juego.comparar_problemas())
+retroalimentacion.pack()
+retroalimentacion1.pack()
 
 guardar_intento = tk.Button(text="guardar intento", command=funcionalidades.Juego.comparar_problemas)
 guardar_intento.pack()
 
+intentos = tk.Label(ventana, text=funcionalidades.Juego.cantidad_intentos())
+intentos.pack()
+
+if funcionalidades.Juego.cantidad_intentos() < 0:
+    mostrar_problema = tk.Label(ventana, text=funcionalidades.Problema.mostrar_problema())
+    mostrar_problema.pack()
 
 ventana.mainloop()
