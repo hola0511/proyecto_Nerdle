@@ -31,7 +31,7 @@ intentos = tk.Label(ventana, text=funcionalidades.Juego.cantidad_intentos())
 intentos.pack()
 
 if funcionalidades.Juego.cantidad_intentos() < 0:
-    mostrar_problema = tk.Label(ventana, text=funcionalidades.Problema.mostrar_problema())
+    mostrar_problema = tk.Label(ventana, text=funcionalidades.Problema.crear_problema())
     mostrar_problema.pack()
 
 ventana.mainloop()

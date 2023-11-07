@@ -23,9 +23,6 @@ class Problema:
         secuencia = [random.choice(elementos) for _ in range(8)]
         return secuencia
 
-    def mostrar_problema(self):
-        pass
-
 
 class Juego:
 
@@ -40,14 +37,14 @@ class Juego:
 
     def comparar_problemas(self):
         intento = Interfaz.intento_pantalla.get()
-        correct_position = 0
-        correct_elements = 0
-        incorrect_elements = 0
+        pocision_correcta = 0
+        elementos_correctos = 0
+        elementos_incorrectos = 0
         for i in range(8):
             if intento[i] == self.target_sequence[i]:
-                correct_position += 1
+                pocision_correcta += 1
             elif intento[i] in self.target_sequence:
-                correct_elements += 1
+                elementos_correctos += 1
             else:
-                incorrect_elements += 1
-        return correct_position, correct_elements, incorrect_elements
+                elementos_incorrectos += 1
+        return pocision_correcta, elementos_correctos, elementos_incorrectos
